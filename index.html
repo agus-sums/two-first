@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Happy Birthday piyuuu</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:900'>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    /* Tambahkan gaya untuk tombol */
+    .button {
+      display: inline-block;
+    padding: 5px 10px;
+    margin: 20px;
+    background-color: #4caf50;
+    color: #020202;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+    }
+
+    .button:hover {
+      background-color: rgba(255, 255, 255, 1); /* Warna latar belakang saat hover */
+    }
+
+    /* Gaya untuk tombol play musik */
+    .play-button {
+     position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px 10px;
+    background-color: #5ea561;
+    color: #020202;
+    font-family: "Source Sans Pro", sans-serif;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    }
+    .play-button:hover {
+      background-color: #45a049; /* Warna latar belakang saat hover */
+    }
+
+    /* Gaya untuk body */
+    body {
+      margin: 0;
+      background: #020202;
+      cursor: crosshair;
+      position: relative; /* Untuk posisi tombol */
+      height: 100vh; /* Mengatur tinggi body */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Menyusun konten di tengah */
+      align-items: center; /* Menyusun konten di tengah */
+    }
+
+    h1 {
+      position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: "Source Sans Pro";
+    font-size: 4em;
+    font-weight: 100;
+    -webkit-user-select: none;
+    }
+
+    /* Gaya untuk elemen canvas */
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- Elemen untuk musik latar belakang -->
+  <audio id="background-music">
+    <source src="lagu/songpiyuuu.mp3" type="audio/mpeg"> <!-- Ganti dengan path yang benar -->
+    Your browser does not support the audio element.
+  </audio>
+
+  <h1>Happy 19th Birthday Sayangg</h1>
+  <canvas id="birthday"></canvas>
+
+  <!-- Tombol untuk memulai musik -->
+  <button class="play-button" onclick="playMusic()">Play Music</button>
+
+  <!-- Tombol hyperlink di bagian pojok kiri bawah -->
+  <a href="https://one-first.vercel.app/" class="button">click me if the music end</a>
+
+  <script>
+    function playMusic() {
+      var audio = document.getElementById('background-music');
+      audio.play(); // Memulai pemutaran audio
+    }
+  </script>
+
+  <script src="./script.js"></script>
+</body>
+</html>
